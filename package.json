@@ -1,0 +1,19 @@
+{
+  "name": "bbd-demo",
+  "version": "0.0.1",
+  "description": "BDD Examples",
+  "main": "index.js",
+  "scripts": {
+    "test": " ./node_modules/.bin/cucumber-js"
+  },
+  "keywords": [
+    "Cucumber"
+  ],
+  "author": "Phodal",
+  "license": "MIT",
+  "dependencies": {
+    "chromedriver": "2.29.0",
+    "cucumber": "^3.0.4",
+    "selenium-webdriver": "3.4.0"
+  }
+}
