@@ -3,19 +3,19 @@ var seleniumWebdriver = require('selenium-webdriver');
 var {defineSupportCode} = require('cucumber');
 
 defineSupportCode(function({Given, When, Then}) {
-    Given('I am on the Cucumber.js GitHub repository', function() {
+    Given('我在 Cucumber.js GitHub repository', function() {
         return this.driver.get('https://github.com/cucumber/cucumber-js/tree/master');
     });
 
-    When('I click on {string}', function (text) {
+    When('我点击 {string}', function (text) {
         return this.driver.findElement({linkText: text}).then(function(element) {
             return element.click();
         });
     });
 
-    Then('I should see {string}', function (text) {
+    Then('我应该看到 {string}', function (text) {
         var xpath = "//*[contains(text(),'" + text + "')]";
         var condition = seleniumWebdriver.until.elementLocated({xpath: xpath});
-        return this.driver.wait(condition, 5000);
+        return this.driver.wait(condition, 10000);
     });
 });
