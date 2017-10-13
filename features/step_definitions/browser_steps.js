@@ -2,6 +2,10 @@
 var seleniumWebdriver = require('selenium-webdriver');
 var {defineSupportCode} = require('cucumber');
 
+defineSupportCode(function({setDefaultTimeout}) {
+    setDefaultTimeout(10 * 1000);
+});
+
 defineSupportCode(function({Given, When, Then}) {
     Given('我在 Cucumber.js GitHub repository', function() {
         return this.driver.get('https://github.com/cucumber/cucumber-js/tree/master');
