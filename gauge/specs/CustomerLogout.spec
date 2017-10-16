@@ -7,7 +7,7 @@ Customer Log out
 
 * Go to active admin store
 
-Customer must be able to log out
+用户应该能够登出
 --------------------------------
-* Sign up as <name> with email <email> and <password>
+* 用户 <name> 应该能用邮箱 <email> 及密码 <password> 登录
 * Log out

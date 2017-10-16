@@ -1,4 +1,4 @@
 
 # Sign up a new customer with name <name> email <email> and <password>
-* Sign up as <name> with email <email> and <password>
+* 用户 <name> 应该能用邮箱 <email> 及密码 <password> 登录
 * Show a message "Thank you for signing up! You are now logged in."

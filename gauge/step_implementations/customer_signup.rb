@@ -4,7 +4,7 @@ require_relative './utils/driver'
 include Test::Unit::Assertions
 include ::Driver
 
-step 'Sign up as <name> with email <email> and <password>' do |name,email,password|
+step '用户 <name> 应该能用邮箱 <email> 及密码 <password> 登录' do |name,email,password|
   driver.find_element(:link_text, 'Sign up').click
 
   form = driver.find_element(:id, 'new_user')
