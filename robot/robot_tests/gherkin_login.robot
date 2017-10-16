@@ -7,7 +7,7 @@ Resource          resource.robot
 Test Teardown     Close Browser
 
 *** Test Cases ***
-Valid Login
+登录失败
     Given 浏览器打开登录页
     When 用户 "demo" 使用 "mode" 登录
     Then 应该跳转到欢迎页
