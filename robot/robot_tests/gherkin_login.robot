@@ -8,15 +8,15 @@ Test Teardown     Close Browser
 
 *** Test Cases ***
 Valid Login
-    Given browser is opened to login page
-    When user "demo" logs in with password "mode"
+    Given 浏览器打开登录页
+    When 用户 "demo" 使用 "mode" 登录
     Then 应该跳转到欢迎页
 
 *** Keywords ***
-Browser is opened to login page
+浏览器打开登录页
     打开浏览器到登录页
 
-User "${username}" logs in with password "${password}"
+用户 "${username}" 使用 "${password}" 登录
     输入用户名    ${username}
     输入密码    ${password}
     提交登录信息
