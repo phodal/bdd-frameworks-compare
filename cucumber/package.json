@@ -4,7 +4,7 @@
   "description": "BDD Examples",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/cucumberjs"
+    "test": "./node_modules/.bin/cucumberjs --format usage"
   },
   "keywords": [
     "Cucumber"
