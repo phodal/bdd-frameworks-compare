@@ -1,0 +1,6 @@
+{
+  "Language": "ruby",
+  "Plugins": [
+    "html-report"
+  ]
+}
