@@ -4,14 +4,14 @@
   "description": "BDD Examples",
   "main": "index.js",
   "scripts": {
-    "test": " ./node_modules/.bin/cucumber-js"
+    "test": "./node_modules/.bin/cucumberjs"
   },
   "keywords": [
     "Cucumber"
   ],
   "author": "Phodal",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "chromedriver": "2.29.0",
     "cucumber": "^3.0.4",
     "selenium-webdriver": "3.4.0"
