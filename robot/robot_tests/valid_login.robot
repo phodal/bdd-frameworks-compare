@@ -6,10 +6,10 @@ Documentation     A test suite with a single test for valid login.
 Resource          resource.robot
 
 *** Test Cases ***
-Valid Login
-    Open Browser To Login Page
-    Input Username    demo
-    Input Password    mode
-    Submit Credentials
-    Welcome Page Should Be Open
+登录成功
+    打开浏览器到登录页
+    输入用户名    demo
+    输入密码    mode
+    提交登录信息
+    应该跳转到欢迎页
     [Teardown]    Close Browser

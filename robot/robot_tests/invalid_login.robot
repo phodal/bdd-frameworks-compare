@@ -7,10 +7,10 @@ Documentation     A test suite containing tests related to invalid login.
 ...
 ...               This suite also demonstrates using setups and teardowns in
 ...               different levels.
-Suite Setup       Open Browser To Login Page
+Suite Setup       打开浏览器到登录页
 Suite Teardown    Close Browser
 Test Setup        Go To Login Page
-Test Template     Login With Invalid Credentials Should Fail
+Test Template     使用错误的失败凭据应该登录失败
 Resource          resource.robot
 
 *** Test Cases ***               USER NAME        PASSWORD
@@ -22,13 +22,13 @@ Empty Password                   ${VALID USER}    ${EMPTY}
 Empty Username And Password      ${EMPTY}         ${EMPTY}
 
 *** Keywords ***
-Login With Invalid Credentials Should Fail
+使用错误的失败凭据应该登录失败
     [Arguments]    ${username}    ${password}
-    Input Username    ${username}
-    Input Password    ${password}
-    Submit Credentials
-    Login Should Have Failed
+    输入用户名    ${username}
+    输入密码    ${password}
+    提交登录信息
+    登录应该不成功
 
-Login Should Have Failed
+登录应该不成功
     Location Should Be    ${ERROR URL}
     Title Should Be    Error Page

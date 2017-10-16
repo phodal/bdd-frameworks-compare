@@ -17,7 +17,7 @@ ${WELCOME URL}    http://${SERVER}/welcome.html
 ${ERROR URL}      http://${SERVER}/error.html
 
 *** Keywords ***
-Open Browser To Login Page
+打开浏览器到登录页
     Open Browser    ${LOGIN URL}    ${BROWSER}
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
@@ -30,17 +30,17 @@ Go To Login Page
     Go To    ${LOGIN URL}
     Login Page Should Be Open
 
-Input Username
+输入用户名
     [Arguments]    ${username}
     Input Text    username_field    ${username}
 
-Input Password
+输入密码
     [Arguments]    ${password}
     Input Text    password_field    ${password}
 
-Submit Credentials
+提交登录信息
     Click Button    login_button
 
-Welcome Page Should Be Open
+应该跳转到欢迎页
     Location Should Be    ${WELCOME URL}
     Title Should Be    Welcome Page
