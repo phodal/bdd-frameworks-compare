@@ -110,3 +110,6 @@ typings/
 .env
 
 
+log.html
+output.xml
+report.html
