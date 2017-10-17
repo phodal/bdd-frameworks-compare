@@ -5,14 +5,18 @@ var chai = require('chai');
 var chaiAsPromised = require('chai-as-promised');
 var assert = require('assert');
 
+chai.use(chaiAsPromised);
+chai.Should();
+
 var options = {
   desiredCapabilities: {
     browserName: 'firefox'
   }
 };
 
-chai.use(chaiAsPromised);
-chai.Should();
+beforeStep(function() {
+
+});
 
 step("检测页面的标题是 <title>", function(titleGiven, done) {
   webdriverio
@@ -26,14 +30,14 @@ step("检测页面的标题是 <title>", function(titleGiven, done) {
     .call(done);
 });
 
-beforeScenario(function () {
+beforeScenario(function() {
 
 });
 
-beforeScenario(function () {
+beforeScenario(function() {
 
 });
 
-gauge.screenshotFn = function () {
+gauge.screenshotFn = function() {
   return "base64encodedstring";
 };
