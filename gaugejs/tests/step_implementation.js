@@ -10,7 +10,7 @@ var browser;
 beforeSuite(async function () {
   browser = await puppeteer.launch({
     headless: false,
-    // slowMo: 100
+    slowMo: 5
   });
   page = await browser.newPage();
   mainFrame = page.mainFrame();
@@ -45,4 +45,13 @@ step("用户应该跳转到欢迎页", async function(){
   });
 
   expect(text).to.equal('Welcome Page');
+});
+
+step("页面应该返回 <query>", async function(query){
+  await page.waitFor('h1');
+  const text = await await page.$eval('#container h1', h1 => {
+    return h1.innerHTML;
+  });
+
+  expect(text).to.equal(query);
 });
