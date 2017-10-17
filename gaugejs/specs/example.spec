@@ -1,5 +1,5 @@
-#This spec is an example on how to use Asynch operqtions with webdriver.io
+#测试用户登录逻辑
 
-Check the title
+登录成功测试
 ---------------------------
-* Check the title of the Google home page is "Google"
+* 检测页面的标题是 "Google"

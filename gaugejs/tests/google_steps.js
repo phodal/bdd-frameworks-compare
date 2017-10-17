@@ -11,11 +11,10 @@ var options = {
   }
 };
 
-
 chai.use(chaiAsPromised);
 chai.Should();
 
-step("Check the title of the Google home page is <title>", function(titleGiven, done) {
+step("检测页面的标题是 <title>", function(titleGiven, done) {
   webdriverio
     .remote(options)
     .init()
@@ -26,3 +25,15 @@ step("Check the title of the Google home page is <title>", function(titleGiven, 
     .end()
     .call(done);
 });
+
+beforeScenario(function () {
+
+});
+
+beforeScenario(function () {
+
+});
+
+gauge.screenshotFn = function () {
+  return "base64encodedstring";
+};
