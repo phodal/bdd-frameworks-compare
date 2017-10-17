@@ -21,3 +21,11 @@ Gauge
 ```
 brew install gauge
 ```
+
+```
+yarn install
+```
+
+```
+selenium-standalone install
+```
