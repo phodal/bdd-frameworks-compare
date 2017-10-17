@@ -4,7 +4,7 @@
   "description": "Starter template for writing JavaScript tests for Gauge",
   "scripts": {
     "start": "selenium-standalone start",
-    "test": "gauge specs/"
+    "test": "gauge run -s specs"
   },
   "devDependencies": {
     "webdriverio": "^4.8.0",

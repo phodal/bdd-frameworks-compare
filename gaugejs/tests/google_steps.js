@@ -10,32 +10,29 @@ chai.Should();
 
 var options = {
   desiredCapabilities: {
-    browserName: 'firefox'
+    browserName: 'chrome'
   }
 };
 
-beforeStep(function() {
+var client;
 
+beforeScenario(function() {
+  client = webdriverio.remote(options);
+  return client.init();
 });
 
 step("检测页面的标题是 <title>", function(titleGiven, done) {
-  webdriverio
-    .remote(options)
-    .init()
-    .url('http://google.com')
+  client
+    .url('https://www.google.com')
     .getTitle().then(function(title) {
-    assert.equal(title, titleGiven);
-  })
-    .end()
-    .call(done);
+      console.log(title);
+      assert.equal(title, titleGiven);
+      done();
+    })
 });
 
-beforeScenario(function() {
-
-});
-
-beforeScenario(function() {
-
+afterScenario(function() {
+  client.end();
 });
 
 gauge.screenshotFn = function() {
