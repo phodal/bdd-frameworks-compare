@@ -16,7 +16,7 @@ var options = {
 
 var client;
 
-beforeScenario(function() {
+beforeScenario(async function() {
   client = webdriverio.remote(options);
   return client.init();
 });
@@ -31,7 +31,7 @@ step("检测页面的标题是 <title>", function(titleGiven, done) {
     })
 });
 
-afterScenario(function() {
+afterScenario(async function() {
   client.end();
 });
 
