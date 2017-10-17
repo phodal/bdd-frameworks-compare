@@ -1,11 +1,14 @@
 # features/documentation.feature
 # language: zh-CN
-功能: 示例代码
-  As a user of Cucumber.js
-  I want to have documentation on Cucumber
-  So that I can concentrate on building awesome applications
+功能: 登录测试
 
-  场景: 阅读文档
-    假设 我在 Cucumber.js GitHub repository
-    当 我点击 "CLI"
-    那么 我应该看到 "Running specific features"
+  激光干涉引力波天文台和室女座干涉仪首次观测到因两颗中子星合并引发的引力波。
+  联合国海地稳定特派团成员全数撤出海地，正式结束为期13年的维持和平行动任务。
+  在德国法兰克福书展最后一天，加拿大作家玛格丽特·阿特伍德获颁德国书商和平奖。
+
+  场景: 正常登录
+    假设 当我在网站的首页
+    当 输入用户名 "demo"
+    当 输入密码 "mode"
+    当 提交登录信息
+    那么 用户应该跳转到欢迎页
