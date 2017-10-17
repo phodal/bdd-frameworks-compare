@@ -30,4 +30,10 @@ defineSupportCode(function({Given, When, Then}) {
         expect(title).to.equal('Welcome Page');
       });
     });
+
+    Then('页面应该返回 {string}', function (string) {
+      this.driver.getTitle().then(function(title) {
+        expect(title).to.equal(string);
+      });
+    });
 });
