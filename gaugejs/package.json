@@ -3,13 +3,9 @@
   "version": "0.0.1",
   "description": "Starter template for writing JavaScript tests for Gauge",
   "scripts": {
-    "start": "selenium-standalone start",
-    "test": "gauge run -s specs"
+    "test": "gauge run specs/"
   },
-  "devDependencies": {
-    "webdriverio": "^4.8.0",
-    "chai": "^4.1.2",
-    "chai-as-promised": "^7.1.1",
-    "selenium-standalone": "^6.9.0"
+  "dependencies": {
+    "puppeteer": "^0.10.2"
   }
 }
