@@ -122,3 +122,5 @@ libs/
 .gradle/
 *.iml
 build/
+production/
+test/
