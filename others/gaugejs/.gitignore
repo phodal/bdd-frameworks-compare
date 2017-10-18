@@ -1,0 +1,17 @@
+node_modules/
+reports/
+.gauge
+logs/
+# Gauge - metadata dir
+.gauge
+
+# Gauge - log files dir
+logs
+
+# Gauge - reports dir
+reports
+
+# Gauge - JavaScript node dependencies
+node_modules
+
+
