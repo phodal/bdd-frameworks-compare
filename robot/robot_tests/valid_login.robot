@@ -7,6 +7,7 @@ Resource          resource.robot
 
 *** Test Cases ***
 登录成功
+    [Tags]  登录
     打开浏览器到登录页
     输入用户名    demo
     输入密码    mode
