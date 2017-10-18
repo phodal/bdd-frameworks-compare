@@ -1,8 +1,6 @@
 BDD 框架对比: Cucumber.js vs Robot Framework vs Gauge.js
 ===
 
-Requirements: Java 8, Node.js 8
-
 BDD Process
 ---
 
@@ -74,7 +72,10 @@ Gauge
 SETUP
 ===
 
+Requirements: Java 8, Node.js 8
+
 Cucumber.js
+---
 
 1. 安装
 
