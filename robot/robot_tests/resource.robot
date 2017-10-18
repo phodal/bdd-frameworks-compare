@@ -26,7 +26,7 @@ ${ERROR URL}      http://${SERVER}/error.html
 Login Page Should Be Open
     Title Should Be    Login Page
 
-Go To Login Page
+转到登录页
     Go To    ${LOGIN URL}
     Login Page Should Be Open
 

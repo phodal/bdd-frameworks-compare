@@ -1,25 +1,19 @@
 *** Settings ***
-Documentation     A test suite containing tests related to invalid login.
+Documentation     登录测试 2
 ...
-...               These tests are data-driven by their nature. They use a single
-...               keyword, specified with Test Template setting, that is called
-...               with different arguments to cover different scenarios.
-...
-...               This suite also demonstrates using setups and teardowns in
-...               different levels.
+...               激光干涉引力波天文台和室女座干涉仪首次观测到因两颗中子星合并引发的引力波。
+...               联合国海地稳定特派团成员全数撤出海地，正式结束为期13年的维持和平行动任务。
+...               在德国法兰克福书展最后一天，加拿大作家玛格丽特·阿特伍德获颁德国书商和平奖。
 Suite Setup       打开浏览器到登录页
 Suite Teardown    Close Browser
-Test Setup        Go To Login Page
+Test Setup        转到登录页
 Test Template     使用错误的失败凭据应该登录失败
 Resource          resource.robot
 
 *** Test Cases ***               USER NAME        PASSWORD
-Invalid Username                 invalid          ${VALID PASSWORD}
-Invalid Password                 ${VALID USER}    invalid
-Invalid Username And Password    invalid          whatever
-Empty Username                   ${EMPTY}         ${VALID PASSWORD}
-Empty Password                   ${VALID USER}    ${EMPTY}
-Empty Username And Password      ${EMPTY}         ${EMPTY}
+无效的用户名                      invalid          ${VALID PASSWORD}
+无效的密码                        ${VALID USER}    invalid
+无效的用户名和密码                 invalid          whatever
 
 *** Keywords ***
 使用错误的失败凭据应该登录失败
