@@ -77,14 +77,14 @@ Requirements: Java 8, Node.js 8
 Cucumber.js
 ---
 
-1. 安装
+1.安装
 
 ```
 cd cucumber
 yarn install
 ```
 
-2. 测试
+2.测试
 
 ```
 npm test
@@ -94,13 +94,13 @@ npm test
 Robot Framework
 ---
 
-1. 安装依赖
+1.安装依赖
 
 ```
 pip install -r requirements.txt
 ```
 
-2. 测试
+2.测试
 
 ```
 robot robot_tests
@@ -111,13 +111,13 @@ Gauge
 
 ### Gauge Puppeteer
 
-1. 安装 Gauge
+1.安装 Gauge
 
 ```
 brew install gauge
 ```
 
-2. 执行安装
+2.执行安装
 
 ```
 yarn install
@@ -125,31 +125,31 @@ yarn install
 
 ### Gauge.js
 
-1. 安装 Gauge
+1.安装 Gauge
 
 ```
 brew install gauge
 ```
 
-2. 执行安装
+2.执行安装
 
 ```
 yarn install
 ```
 
-3. 安装 local 版 selenium
+3.安装 local 版 selenium
 
 ```
 selenium-standalone install
 ```
 
-5. Terminal 1:
+4.Terminal 1:
 
 ```
 selenium-standalone start
 ```
 
-6. Terminal 2:
+5.Terminal 2:
 
 ```
 npm test
@@ -157,6 +157,8 @@ npm test
 
 其它
 ---
+
+### Gauge 笔记
 
 ```
 $ gauge init -t
