@@ -6,6 +6,8 @@ Requirements: Java 8, Node.js 8
 BDD Process
 ---
 
+![BDD Process](./docs/bdd_process.jpg)
+
 ![BDD Process](./docs/bdd.png)
 
 COMPARE
