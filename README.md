@@ -1,12 +1,15 @@
 BDD 框架对比: Cucumber.js vs Robot Framework vs Gauge.js
 ===
 
+Requirements: Java 8, Node.js 8
+
 BDD Process
 ---
 
 ![BDD Process](./docs/bdd.png)
 
-Requirements: Java 8, Node.js 8
+COMPARE
+---
 
  x          |  Cucumber                          |Gauge                |   Robot   
 ------------|------------------------------------|----------------------|-----------
@@ -22,7 +25,13 @@ Cucumber.js
 
 > Cucumber 是一个能够理解用普通语言 描述的测试用例的支持行为驱动开发（BDD）的自动化测试工具，用Ruby编写，支持Java和.Net等多种开发语言。
   
-
+ - 使用自然语言，更易读
+ - 支持表格参数
+ - 支持多种格式的Report：html、junit etc.
+ - 支持多种语言
+ - 支持四种状态的测试步骤：Passed、Failed、Skipped、Pending
+ - 支持使用变形器消除重复
+ - 一个商用的在线 Cucumber 系统：Cucumber Pro
 
 ```
 yarn install
@@ -35,6 +44,21 @@ npm test
 
 Robot
 ---
+
+> Robot Framework是一款python编写的功能自动化测试框架。具备良好的可扩展性，支持关键字驱动，可以同时测试多种类型的客户端或者接口，可以进行分布式测试执行。 
+
+
+![Robot 架构](./docs/robot-architecture.png)
+
+关键特性：
+
+ - 使用关键字的机制，更容易上手
+ - 提供了RIDE，对于不熟悉编码的人来说比较友好
+ - 能够精细的控制关键字的scope
+ - Log 和 Report 非常好
+ - 使用变量文件的机制来描述不同的环境
+ - 丰富的关键字库
+ - 内置变量
 
 ```
 pip install -r requirements.txt
@@ -52,7 +76,7 @@ Gauge
 关键特性：
 
  - 基于 markdown 的丰富的标记
- - 支持用任何程序语言来编写测试代码。在 Test Code 查看当前支持的语言
+ - 支持用任何程序语言来编写测试代码
  - 支持 plugin 的模块化架构
  - 跨语言实现一致性。
  - 简单，灵活和丰富的语法
