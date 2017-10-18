@@ -35,16 +35,7 @@ Cucumber.js
  - 支持使用变形器消除重复
  - 一个商用的在线 Cucumber 系统：Cucumber Pro
 
-```
-yarn install
-```
-
-```
-npm test
-```
-
-
-Robot
+Robot Framework
 ---
 
 > Robot Framework是一款python编写的功能自动化测试框架。具备良好的可扩展性，支持关键字驱动，可以同时测试多种类型的客户端或者接口，可以进行分布式测试执行。 
@@ -61,14 +52,6 @@ Robot
  - 使用变量文件的机制来描述不同的环境
  - 丰富的关键字库
  - 内置变量
-
-```
-pip install -r requirements.txt
-```
-
-```
-robot robot_tests
-```
 
 Gauge
 ---
@@ -88,9 +71,91 @@ Gauge
  - 支持外部数据来源
  - IDE Support
 
+SETUP
+===
+
+Cucumber.js
+
+1. 安装
+
+```
+cd cucumber
+yarn install
+```
+
+2. 测试
+
+```
+npm test
+```
+
+
+Robot Framework
+---
+
+1. 安装依赖
+
+```
+pip install -r requirements.txt
+```
+
+2. 测试
+
+```
+robot robot_tests
+```
+
+Gauge
+---
+
+### Gauge Puppeteer
+
+1. 安装 Gauge
+
 ```
 brew install gauge
 ```
+
+2. 执行安装
+
+```
+yarn install
+```
+
+### Gauge.js
+
+1. 安装 Gauge
+
+```
+brew install gauge
+```
+
+2. 执行安装
+
+```
+yarn install
+```
+
+3. 安装 local 版 selenium
+
+```
+selenium-standalone install
+```
+
+5. Terminal 1:
+
+```
+selenium-standalone start
+```
+
+6. Terminal 2:
+
+```
+npm test
+```
+
+其它
+---
 
 ```
 $ gauge init -t
@@ -108,36 +173,4 @@ go_agouti
 csharp
 
 Run `gauge init <template_name>` to create a new Gauge project.
-```
-
-### gauge js_webdriver
-
-```
-yarn install
-```
-
-```
-selenium-standalone install
-```
-
-Terminal 1:
-
-```
-selenium-standalone start
-```
-
-Terminal 2:
-
-```
-npm test
-```
-
-### 
-
-```
-yarn install
-```
-
-```
-npm test
 ```
