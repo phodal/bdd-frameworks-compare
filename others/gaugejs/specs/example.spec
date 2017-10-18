@@ -1,13 +1,29 @@
-Getting Started with Gauge
-==========================
+登录测试
+===
 
-This is an executable specification file. This file follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
-To execute this specification, use
-	npm test
+激光干涉引力波天文台和室女座干涉仪首次观测到因两颗中子星合并引发的引力波。
+联合国海地稳定特派团成员全数撤出海地，正式结束为期13年的维持和平行动任务。
+在德国法兰克福书展最后一天，加拿大作家玛格丽特·阿特伍德获颁德国书商和平奖。
 
-* Go to Gauge homepage at "http://getgauge.io"
 
-Get Started
+     |用户名   |密码     |
+     |--------|--------|
+     |Jan1    |password|
+     |Jan2    |password|
+
+
+正常登录
 -----------
-* Go to Get Started page
-* Show subtitle "Choose your OS & download" 
+* 当我在网站的首页
+* 输入用户名 "demo"
+* 输入密码 "mode"
+* 提交登录信息
+* 用户应该跳转到欢迎页
+
+失败的登录
+-----------
+* 当我在网站的首页
+* 输入用户名 <用户名>
+* 输入密码 <密码>
+* 提交登录信息
+* 页面应该返回 "Error Page"
