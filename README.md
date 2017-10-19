@@ -194,7 +194,7 @@ Gauge
 
 示例代码：[https://github.com/phodal/bdd-frameworks-compare/tree/master/gaugejs](https://github.com/phodal/bdd-frameworks-compare/tree/master/gaugejs)
 
-```spec
+```markdown
 失败的登录
 ===
 
