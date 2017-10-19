@@ -35,6 +35,8 @@ Cucumber.js
 
 ### DSL Code Examples
 
+示例代码：[https://github.com/phodal/bdd-frameworks-compare/tree/master/cucumber](https://github.com/phodal/bdd-frameworks-compare/tree/master/cucumber)
+
 ```cucumber
 # language: zh-CN
 功能: 失败的登录
@@ -100,7 +102,13 @@ Robot Framework
 
 ### DSL Code Examples
 
+<<<<<<< HEAD
 ```robot
+=======
+示例代码：[https://github.com/phodal/bdd-frameworks-compare/tree/master/robot](https://github.com/phodal/bdd-frameworks-compare/tree/master/robot)
+
+```
+>>>>>>> [DOC] update refences
 *** Settings ***
 Documentation     登录测试 2
 ...
@@ -163,6 +171,8 @@ Login Page Should Be Open
 
 ### 报告示例
 
+[点击查看示例](./report_examples/robot_report.html)
+
 ![Robot Framework Report](./docs/robot-report.png)
 
 Gauge
@@ -185,7 +195,13 @@ Gauge
 
 ### DSL Code Examples
 
+<<<<<<< HEAD
 ```spec
+=======
+示例代码：[https://github.com/phodal/bdd-frameworks-compare/tree/master/gaugejs](https://github.com/phodal/bdd-frameworks-compare/tree/master/gaugejs)
+
+```
+>>>>>>> [DOC] update refences
 失败的登录
 ===
 
@@ -237,16 +253,23 @@ step("页面应该返回 <query>", async function(query){
 
 ### 报告示例
 
-![Gauge Report](./docs/gauge-report.png)
+[点击查看示例](./report_examples/gauge_report/index.html)
 
+![Gauge Report](./docs/gauge-report.png)
 
 SETUP
 ===
 
 Requirements: Java 8, Node.js 8
 
+```
+git clone https://github.com/phodal/bdd-frameworks-compare
+```
+
 Cucumber.js
 ---
+
+代码：[https://github.com/phodal/bdd-frameworks-compare/tree/master/cucumber](https://github.com/phodal/bdd-frameworks-compare/tree/master/cucumber)
 
 1.安装
 
@@ -265,6 +288,8 @@ npm test
 Robot Framework
 ---
 
+代码：[https://github.com/phodal/bdd-frameworks-compare/tree/master/robot](https://github.com/phodal/bdd-frameworks-compare/tree/master/robot)
+
 1.安装依赖
 
 ```
@@ -279,6 +304,8 @@ robot robot_tests
 
 Gauge
 ---
+
+代码：[https://github.com/phodal/bdd-frameworks-compare/tree/master/gaugejs](https://github.com/phodal/bdd-frameworks-compare/tree/master/gaugejs)
 
 ### Gauge Puppeteer
 
@@ -295,6 +322,8 @@ yarn install
 ```
 
 ### Gauge.js
+
+代码：[https://github.com/phodal/bdd-frameworks-compare/tree/master/others/gaugejs](https://github.com/phodal/bdd-frameworks-compare/tree/master/others/gaugejs)
 
 1.安装 Gauge
 
