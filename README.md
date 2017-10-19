@@ -35,7 +35,7 @@ Cucumber.js
 
 ### DSL Code Examples
 
-```
+```cucumber
 # language: zh-CN
 功能: 失败的登录
 
@@ -100,7 +100,7 @@ Robot Framework
 
 ### DSL Code Examples
 
-```
+```robot
 *** Settings ***
 Documentation     登录测试 2
 ...
@@ -131,7 +131,7 @@ Resource          resource.robot
 
 ### Step Code Examples
 
-```
+```robot
 打开浏览器到登录页
     Open Browser    ${LOGIN URL}    ${BROWSER}
     Maximize Browser Window
@@ -185,7 +185,7 @@ Gauge
 
 ### DSL Code Examples
 
-```
+```spec
 失败的登录
 ===
 
