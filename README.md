@@ -1,10 +1,14 @@
 BDD 框架对比: Cucumber.js vs Robot Framework vs Gauge.js
 ===
 
-BDD Process
+BDD Workflow
 ---
 
 ![BDD Process](./docs/bdd_process.jpg)
+
+
+BDD Process
+---
 
 ![BDD Process](./docs/bdd.png)
 
