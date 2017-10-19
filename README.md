@@ -33,7 +33,7 @@ Cucumber.js
  - 支持使用变形器消除重复
  - 一个商用的在线 Cucumber 系统：Cucumber Pro
 
-### Code Examples
+### DSL Code Examples
 
 ```
 # language: zh-CN
@@ -50,6 +50,34 @@ Cucumber.js
       |用户名     |密码      |
       |'Jan1'    |'password'|
       |'Jan2'    |'password'|
+```
+
+### Step Code Examples
+
+```javascript
+defineSupportCode(function({Given, When, Then}) {
+    Given('当我在网站的首页', function() {
+        return this.driver.get('http://0.0.0.0:7272/');
+    });
+
+    When('输入用户名 {string}', function (text) {
+        return this.driver.findElement(By.id('username_field')).sendKeys(text)
+    });
+
+    When('输入密码 {string}', function (text) {
+        return this.driver.findElement(By.id('password_field')).sendKeys(text)
+    });
+
+    When('提交登录信息', function () {
+        return this.driver.findElement(By.id('login_button')).click()
+    });
+
+    Then('页面应该返回 {string}', function (string) {
+      this.driver.getTitle().then(function(title) {
+        expect(title).to.equal(string);
+      });
+    });
+});
 ```
 
 Robot Framework
@@ -70,7 +98,7 @@ Robot Framework
  - 丰富的关键字库
  - 内置变量
 
-### Code Examples
+### DSL Code Examples
 
 ```
 *** Settings ***
@@ -100,6 +128,39 @@ Resource          resource.robot
     Title Should Be    Error Page
 ```
 
+
+### Step Code Examples
+
+```
+打开浏览器到登录页
+    Open Browser    ${LOGIN URL}    ${BROWSER}
+    Maximize Browser Window
+    Set Selenium Speed    ${DELAY}
+    Login Page Should Be Open
+
+Login Page Should Be Open
+    Title Should Be    Login Page
+
+转到登录页
+    Go To    ${LOGIN URL}
+    Login Page Should Be Open
+
+输入用户名
+    [Arguments]    ${username}
+    Input Text    username_field    ${username}
+
+输入密码
+    [Arguments]    ${password}
+    Input Text    password_field    ${password}
+
+提交登录信息
+    Click Button    login_button
+
+应该跳转到欢迎页
+    Location Should Be    ${WELCOME URL}
+    Title Should Be        Welcome Page
+```
+
 ### 报告示例
 
 ![Robot Framework Report](./docs/robot-report.png)
@@ -122,7 +183,7 @@ Gauge
  - 支持外部数据来源
  - IDE Support
 
-### Code Examples
+### DSL Code Examples
 
 ```
 失败的登录
@@ -140,6 +201,38 @@ Gauge
 * 输入密码 <密码>
 * 提交登录信息
 * 页面应该返回 "Error Page"
+```
+
+### Step Code Examples
+
+```javascript
+step("当我在网站的首页", async function () {
+  await page.goto('http://0.0.0.0:7272/');
+});
+
+step("输入用户名 <query>", async function (query) {
+  await page.click('#username_field');
+  await page.type(query)
+});
+
+step("输入密码 <query>", async function (query) {
+  await page.click('#password_field');
+  await page.type(query)
+});
+
+step("提交登录信息", async function () {
+  await page.click('#login_button')
+});
+
+step("页面应该返回 <query>", async function(query){
+  await page.waitFor('h1');
+  const text = await await page.$eval('#container h1', h1 => {
+    return h1.innerHTML;
+  });
+
+  expect(text).to.equal(query);
+});
+
 ```
 
 ### 报告示例
