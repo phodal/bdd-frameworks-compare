@@ -111,6 +111,7 @@ typings/
 
 
 log.html
+!report_examples/*
 output.xml
 report.html
 .gauge/
