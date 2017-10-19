@@ -33,6 +33,25 @@ Cucumber.js
  - 支持使用变形器消除重复
  - 一个商用的在线 Cucumber 系统：Cucumber Pro
 
+### Code Examples
+
+```
+# language: zh-CN
+功能: 失败的登录
+
+  场景大纲: 失败的登录
+    假设 当我在网站的首页
+    当 输入用户名 <用户名>
+    当 输入密码 <密码>
+    当 提交登录信息
+    那么 页面应该返回 "Error Page"
+
+    例子:
+      |用户名     |密码      |
+      |'Jan1'    |'password'|
+      |'Jan2'    |'password'|
+```
+
 Robot Framework
 ---
 
@@ -51,6 +70,36 @@ Robot Framework
  - 丰富的关键字库
  - 内置变量
 
+### Code Examples
+
+```
+*** Settings ***
+Documentation     登录测试 2
+...
+Suite Setup       打开浏览器到登录页1
+Suite Teardown    Close Browser
+Test Setup        转到登录页
+Test Template     使用错误的失败凭据应该登录失败
+Resource          resource.robot
+
+*** Test Cases ***               USER NAME        PASSWORD
+无效的用户名                      invalid          ${VALID PASSWORD}
+无效的密码                        ${VALID USER}    invalid
+无效的用户名和密码                 invalid          whatever
+
+*** Keywords ***
+使用错误的失败凭据应该登录失败
+    [Arguments]    ${username}    ${password}
+    输入用户名    ${username}
+    输入密码    ${password}
+    提交登录信息
+    登录应该不成功
+
+登录应该不成功
+    Location Should Be    ${ERROR URL}
+    Title Should Be    Error Page
+```
+
 Gauge
 ---
 
@@ -68,6 +117,26 @@ Gauge
  - 帮助您创建可维护和可理解的测试套件
  - 支持外部数据来源
  - IDE Support
+
+### Code Examples
+
+```
+失败的登录
+===
+
+     |用户名   |密码     |
+     |--------|--------|
+     |Jan1    |password|
+     |Jan2    |password|
+
+失败的登录
+-----------
+* 当我在网站的首页
+* 输入用户名 <用户名>
+* 输入密码 <密码>
+* 提交登录信息
+* 页面应该返回 "Error Page"
+```
 
 SETUP
 ===
