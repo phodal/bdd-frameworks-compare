@@ -102,13 +102,9 @@ Robot Framework
 
 ### DSL Code Examples
 
-<<<<<<< HEAD
-```robot
-=======
 示例代码：[https://github.com/phodal/bdd-frameworks-compare/tree/master/robot](https://github.com/phodal/bdd-frameworks-compare/tree/master/robot)
 
-```
->>>>>>> [DOC] update refences
+```robot
 *** Settings ***
 Documentation     登录测试 2
 ...
@@ -195,13 +191,9 @@ Gauge
 
 ### DSL Code Examples
 
-<<<<<<< HEAD
-```spec
-=======
 示例代码：[https://github.com/phodal/bdd-frameworks-compare/tree/master/gaugejs](https://github.com/phodal/bdd-frameworks-compare/tree/master/gaugejs)
 
-```
->>>>>>> [DOC] update refences
+```spec
 失败的登录
 ===
 
