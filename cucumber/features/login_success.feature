@@ -1,4 +1,3 @@
-# features/documentation.feature
 # language: zh-CN
 功能: 成功的登录
 
