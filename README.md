@@ -100,6 +100,10 @@ Resource          resource.robot
     Title Should Be    Error Page
 ```
 
+### 报告示例
+
+![Robot Framework Report](./docs/robot-report.png)
+
 Gauge
 ---
 
@@ -137,6 +141,11 @@ Gauge
 * 提交登录信息
 * 页面应该返回 "Error Page"
 ```
+
+### 报告示例
+
+![Gauge Report](./docs/gauge-report.png)
+
 
 SETUP
 ===
