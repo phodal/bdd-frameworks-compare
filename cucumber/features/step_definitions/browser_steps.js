@@ -1,5 +1,3 @@
-// features/step_definitions/browser_steps.js
-// var seleniumWebdriver = require('selenium-webdriver');
 var {defineSupportCode} = require('cucumber');
 var { By } = require('selenium-webdriver');
 const expect = require('chai').expect;
