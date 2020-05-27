@@ -1,31 +1,45 @@
 /* globals gauge*/
 "use strict";
-const { openBrowser,write, closeBrowser, goto, press, screenshot, text, focus, textBox, toRightOf } = require('taiko');
+const {openBrowser, write, closeBrowser, goto, screenshot, click, waitFor, into, $, evaluate, document} = require('taiko');
 const assert = require("assert");
 const headless = process.env.headless_chrome.toLowerCase() === 'true';
 
 beforeSuite(async () => {
-    await openBrowser({ headless: headless })
+    await openBrowser({headless: headless})
 });
 
 afterSuite(async () => {
     await closeBrowser();
 });
 
-gauge.screenshotFn = async function() {
-    return await screenshot({ encoding: 'base64' });
+gauge.screenshotFn = async function () {
+    return await screenshot({encoding: 'base64'});
 };
 
-step("Goto getgauge github page", async () => {
-    await goto('https://github.com/getgauge');
+step("当我在网站的首页", async function () {
+    await goto('http://0.0.0.0:7272/');
 });
 
-step("Search for <query>", async (query) => {
-    await focus(textBox(toRightOf('Pricing')))
-    await write(query);
-    await press('Enter');
+step("输入用户名 <query>", async function (query) {
+    await write(query, into($('#username_field')));
 });
 
-step("Page contains <content>", async (content) => {
-    assert.ok(await text(content).exists());
+step("输入密码 <query>", async function (query) {
+    await write(query, into($('#password_field')));
+});
+
+step("提交登录信息", async function () {
+    await click($('#login_button'))
+});
+
+step("用户应该跳转到欢迎页", async function () {
+    assert.strictEqual(await evaluate(() => {
+        return document.title;
+    } ), 'Welcome Page');
+});
+
+step("页面应该返回 <query>", async function (query) {
+    assert.strictEqual(await evaluate(() => {
+        return document.title;
+    } ), query);
 });
