@@ -6,7 +6,7 @@
     "test": "gauge run specs/"
   },
   "dependencies": {
-    "chai": "^4.1.2",
-    "puppeteer": "^0.10.2"
+    "chai": "^4.2.0",
+    "puppeteer": "^3.1.0"
   }
 }
