@@ -229,13 +229,11 @@ step("当我在网站的首页", async function () {
 });
 
 step("输入用户名 <query>", async function (query) {
-  await page.click('#username_field');
-  await page.type(query)
+  await page.type('#username_field', query)
 });
 
 step("输入密码 <query>", async function (query) {
-  await page.click('#password_field');
-  await page.type(query)
+  await page.type('#password_field', query)
 });
 
 step("提交登录信息", async function () {
